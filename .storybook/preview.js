@@ -1,14 +1,17 @@
 import { withMuiTheme } from './with-mui-theme.decorator';
 
-// Preload Roboto fonts
-import(/* webpackPreload: true */ '@fontsource/roboto/300.css');
-import(/* webpackPreload: true */ '@fontsource/roboto/400.css');
-import(/* webpackPreload: true */ '@fontsource/roboto/500.css');
-import(/* webpackPreload: true */ '@fontsource/roboto/700.css');
+// Load Roboto fonts
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+import '@fontsource/material-icons';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
+    expanded: true,
+    hideNoControlsWarning: true,
     matchers: {
       color: /(background|color)$/i,
       date: /Date$/,
@@ -24,6 +27,7 @@ export const globalTypes = {
     defaultValue: 'light',
     toolbar: {
       icon: 'paintbrush',
+      dynamicTitle: true,
       items: [
         { value: 'light', left: '☀️', title: 'Light mode' },
         { value: 'dark', left: '🌙', title: 'Dark mode' },
@@ -34,4 +38,4 @@ export const globalTypes = {
 
 export const decorators = [
   withMuiTheme,
-]
+];
