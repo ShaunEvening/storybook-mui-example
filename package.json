@@ -70,6 +70,7 @@
     "@types/react-dom": "^18.0.6",
     "babel-plugin-named-exports-order": "^0.0.2",
     "prop-types": "^15.8.1",
+    "storybook-addon-style-toolbox": "^0.0.2",
     "typescript": "^4.8.4",
     "webpack": "^5.74.0"
   }
